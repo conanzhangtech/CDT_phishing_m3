@@ -63,7 +63,7 @@ TO
 
 #### In the last section, we will be analysing the sample data output from Terminal 1 and Terminal 2 ( REFER TO EXECUTION(2) )
 
-##### Terminal 1 ( EXECUTION(2)(1) )
+##### 1. Terminal 1 ( EXECUTION(2)(1) )
 
 The data presented in this output is the input from the rogue Wireless@SG website.
 
@@ -78,10 +78,10 @@ From the above data, we can safely deduce the following imformation:
 > Poster Code: 123456
 > Address: 123 Tamp f
 
-##### Terminal 2 ( EXECUTION(2)(2) )
-
+##### 2. Terminal 2 ( EXECUTION(2)(2) )
+ 
 The data presented in this output is the input from the rogue Ministry of Finance website. 
-
+ 
 > Entry 3 | 172.32.0.100-[25/Jul/2020:15:13:21+0800] - WIFI HOTSPOT
 >
 > /MOF%20|%20Seek%20Permission%20Form_files/FormFEDYA.html?REF=2020_SPF_MOF&CARD=99999999999999999&CVV=999&EXP=99%2F99
@@ -91,11 +91,11 @@ From the above data, we can safely deduce the following imformation:
 > CVV: 999
 > Exp Date: 99/99
 
-###Entry 3 | 172.32.0.100-[25/Jul/2020:15:13:21+0800] - WIFI HOTSPOT
+> Entry 3 | 172.32.0.100-[25/Jul/2020:15:13:21+0800] - WIFI HOTSPOT
+>
+> /MOF%20|%20Seek%20Permission%20Form_files/FormFEDYA.html?REF=2020_SPF_MOF&CARD=99999999999999999&CVV=999&EXP=99%2F99
 
-/MOF%20|%20Seek%20Permission%20Form_files/FormFEDYA.html?REF=2020_SPF_MOF&CARD=99999999999999999&CVV=999&EXP=99%2F99
-
-### NOTE: TO ENSURE THE CORROSPONDING VICTIM FROM TERMINAL 1 AND TERMINAL2 DATA, ALWAYS CHECK THE TIME AND DATE OF INPUT.
+#### NOTE: TO ENSURE THE CORROSPONDING VICTIM FROM TERMINAL 1 AND TERMINAL2 DATA, ALWAYS CHECK THE TIME AND DATE OF INPUT.
 
 # CREDIT AND SUPPORT
 
