@@ -51,7 +51,7 @@ TO
 
 1. Load the website on your browser.
 
-> http://hostspot.wireless/m3
+> http://hotspot.wireless/m3
 
 2. Start capturing the user inputs by opening 2 different terminals.
 
