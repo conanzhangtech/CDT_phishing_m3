@@ -28,7 +28,7 @@ At the same time, the demonstration also showcase how the attacker processes you
 > git clone https://github.com/conan97zhang/CDT_phishing_m3.git
 
 2. Move the CDT_phishing_m3 folder into the Nginx web server's root directory and rename it into m3.
-> mv -r CDT_phishing_m3 /var/www/html/m3
+> mv CDT_phishing_m3 /var/www/html/m3
 
 3. Associate the domain name hotspot.wireless with localhost IP address.
 > nano /etc/hosts
@@ -51,7 +51,7 @@ TO
 
 1. Load the website on your browser.
 
-> http://hostspot.wireless
+> http://hostspot.wireless/m3
 
 2. Start capturing the user inputs by opening 2 different terminals.
 
@@ -103,7 +103,7 @@ From the above data, we can safely deduce the following information:
 >
 > Exp Date: 99/99
 
-#### NOTE: TO ENSURE THE CORROSPONDING VICTIM FROM TERMINAL 1 AND TERMINAL2 DATA, ALWAYS CHECK THE TIME AND DATE OF INPUT.
+#### NOTE: TO ENSURE THE CORROSPONDING VICTIM FROM TERMINAL 1 AND TERMINAL 2 DATA MATCHES, ALWAYS CHECK THE TIME AND DATE OF INPUT.
 
 ##### ====================================================================================================================
 
