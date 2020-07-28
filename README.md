@@ -1,12 +1,12 @@
 # CDT_phishing_m3
 
-THIS RESPOSITORY IS PRIVATE AND IS NOT TO BE SHAED WITH ANYONE OTHER THAN
+THIS REPOSITORY IS PRIVATE AND IS NOT TO BE SHAED WITH ANYONE OTHER THAN
 CYBER YOUTH SINGAPORE AND ITS CURRICULUM DEVELOPMENT TEAM, UNLESS OTHERWISE
 STATED.
 
 ## PREREQUISITE
 
-#### In this section, I will be explaining what are the required packages bbefore we start the installation.
+#### In this section, we will be explaining what are the required packages before we start the installation.
 1. Ubuntu 18.04 and above
 > https://ubuntu.com/download/desktop
 2. nginx web server package
@@ -15,13 +15,13 @@ STATED.
 > apt install git
 ## INSTALLATION
 
-#### In this section, I will be explaining how to put the files into your web server and ensure it loads.
+#### In this section, we will be explaining how to put the files into the webserver and ensure it loads.
 
-1. Clone the git respository into your web server.
+1. Clone the git repository into the webserver.
 > git clone https://github.com/conan97zhang/CDT_phishing_m3.git
-2. Move the CDT_phishing_m3 folder into your nginx web server's root directory and rename it into m3.
+2. Move the CDT_phishing_m3 folder into the Nginx web server's root directory and rename it into m3.
 > mv -r CDT_phishing_m3 /var/www/html/m3
-3. Associate the domain name hotspot.wireless with out localhost ip address.
+3. Associate the domain name hotspot.wireless without localhost IP address.
 > nano /etc/hosts
 3.1 Amend the following line from
 
@@ -34,7 +34,7 @@ TO
 > service nginx start
 ## EXECUTION
 
-#### In this section, I will be explaining how will the frontend (victim's browser) sends the data to the backend (attacker's server) seamlessly.
+#### In this section, we will be explaining how will the frontend (victim's browser) sends the data to the backend (attacker's server) seamlessly.
 
 1. Load the website on your browser.
 
