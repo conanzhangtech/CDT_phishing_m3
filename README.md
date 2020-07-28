@@ -86,7 +86,6 @@ From the above data, we can safely deduce the following imformation:
 ##### ====================================================================================================================
 
 # CREDIT AND SUPPORT
-1. To install,
 
 #### ZHANG TIANCI CONAN
 #### TELEGRAM: https://t.me/conan97zhang
