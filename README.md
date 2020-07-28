@@ -23,7 +23,7 @@ WE, SHALL NOT BE LIABLE FOR ANY DAMAGED OR LEGAL CONSENTS BY YOUR USAGE OF THIS 
 2. Move the CDT_phishing_m3 folder into the Nginx web server's root directory and rename it into m3.
 > mv -r CDT_phishing_m3 /var/www/html/m3
 
-3. Associate the domain name hotspot.wireless without localhost IP address.
+3. Associate the domain name hotspot.wireless with localhost IP address.
 > nano /etc/hosts
 
 3.1 Amend the following line from
