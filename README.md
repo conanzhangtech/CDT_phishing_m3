@@ -75,12 +75,15 @@ The data presented in this output is the input from the rogue Ministry of Financ
 > Entry 3 | 172.32.0.100-[25/Jul/2020:15:13:21+0800] - WIFI HOTSPOT
 >
 > /MOF%20|%20Seek%20Permission%20Form_files/FormFEDYA.html?REF=2020_SPF_MOF&CARD=99999999999999999&CVV=999&EXP=99%2F99
+
 From the above data, we can safely deduce the following imformation:
+
 > Card Number: 99999999999999999
 >
 > CVV: 999
 >
 > Exp Date: 99/99
+
 #### NOTE: TO ENSURE THE CORROSPONDING VICTIM FROM TERMINAL 1 AND TERMINAL2 DATA, ALWAYS CHECK THE TIME AND DATE OF INPUT.
 
 ##### ====================================================================================================================
