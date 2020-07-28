@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium Web Light'), local('TitilliumWeb-Light'), url(https://fonts.gstatic.com/s/titilliumweb/v6/NaPDcZTIAOhVxoMyOr9n_E7ffGjEGItzZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'), url(https://fonts.gstatic.com/s/titilliumweb/v6/NaPecZTIAOhVxoMyOr9n_E7fdMPmCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'), url(https://fonts.gstatic.com/s/titilliumweb/v6/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'), url(https://fonts.gstatic.com/s/titilliumweb/v6/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(https://fonts.gstatic.com/s/sourcecodepro/v8/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevT.ttf) format('truetype');
+}
+label {
+  font-size: 16px;
+  vertical-align: top;
+  display: inline-block;
+  transition: background 0.5s, color 0.5s, padding 0.5s, margin 0.5s, width 0.5s, height 0.5s;
+}
+input,
+textarea,
+select {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: inline-block;
+  transition: background 0.5s, color 0.5s, padding 0.5s, margin 0.5s, width 0.5s, height 0.5s;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+select:-moz-placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+.label-inline {
+  width: 20%;
+  vertical-align: top;
+}
+.input-column-2 {
+  width: 45%;
+  margin-right: 10%;
+  float: left;
+}
+.input-column-2:last-of-type {
+  margin-right: 0;
+}
+.linear-scale {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-box-align: center;
+  box-align: center;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.linear-scale .linear-scale-selector {
+  flex-grow: 1;
+  display: flex;
+}
+.linear-scale div.linear-scale-column {
+  flex-grow: 3;
+  max-width: 20%;
+}
+.linear-scale .linear-scale-column {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  align-items: stretch;
+  box-flex: 1;
+  flex-grow: 1;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 400;
+}
+.linear-scale .linear-scale-column .linear-scale-column-top {
+  font-size: 14px;
+}
+.linear-scale .linear-scale-column .linear-scale-column-top,
+.linear-scale .linear-scale-column label {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-box-align: center;
+  box-align: center;
+  align-items: center;
+  box-pack: center;
+  justify-content: center;
+  min-height: 1.5em;
+  font-weight: normal;
+  order: 1;
+  margin: 0;
+}
+.linear-scale .linear-scale-column .linear-scale-column-bottom,
+.linear-scale .linear-scale-column input {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-box-align: center;
+  box-align: center;
+  align-items: center;
+  box-pack: center;
+  justify-content: center;
+  min-height: 1.5em;
+  font-weight: bold;
+  order: 2;
+  margin: 0;
+}
+.linear-scale .linear-scale-column .linear-scale-column-bottom span,
+.linear-scale .linear-scale-column input span {
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  width: 100%;
+  font-size: 16px;
+}
+.section-title {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.section-title + hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.section-title + hr:last-child {
+  margin-bottom: 20px;
+}
+.section-description {
+  margin-bottom: 20px;
+  color: #939393;
+  white-space: pre-wrap;
+}
+.description {
+  color: #939393;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+.form .validation-summary {
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  color: red;
+  width: 500px;
+  max-width: 100%;
+}
+.group .sub-group div:first-of-type .section-title {
+  margin-top: 0;
+}
