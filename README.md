@@ -58,7 +58,9 @@ The data presented in this output is the input from the rogue Wireless@SG websit
 > Entry 4 | 172.32.0.100-[25/Jul/2020:15:14:57+0800] - WIFI HOTSPOT
 > 
 > /detected.html?title=Title&input=Mr&name=Full+Name&input=John&NRIC=Last+4+digits+of+NRIC&input=345D&postal+code=Postal+Code&input=123456&address=Address&input=123+Tamp+f
+
 From the above data, we can safely deduce the following imformation:
+
 > Title: Mr
 >
 > Full Name: John
