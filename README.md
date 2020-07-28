@@ -73,9 +73,13 @@ The data presented in this output is the input from the rogue Wireless@SG websit
 
 From the above data, we can safely deduce the following imformation:
 > Title: Mr
+>
 > Full Name: John
+>
 > Last 4 digits of NRIC: 345D
+>
 > Poster Code: 123456
+>
 > Address: 123 Tamp f
 
 ##### 2. Terminal 2 ( EXECUTION(2)(2) )
@@ -88,12 +92,10 @@ The data presented in this output is the input from the rogue Ministry of Financ
 
 From the above data, we can safely deduce the following imformation:
 > Card Number: 99999999999999999
-> CVV: 999
-> Exp Date: 99/99
-
-> Entry 3 | 172.32.0.100-[25/Jul/2020:15:13:21+0800] - WIFI HOTSPOT
 >
-> /MOF%20|%20Seek%20Permission%20Form_files/FormFEDYA.html?REF=2020_SPF_MOF&CARD=99999999999999999&CVV=999&EXP=99%2F99
+> CVV: 999
+>
+> Exp Date: 99/99
 
 #### NOTE: TO ENSURE THE CORROSPONDING VICTIM FROM TERMINAL 1 AND TERMINAL2 DATA, ALWAYS CHECK THE TIME AND DATE OF INPUT.
 
