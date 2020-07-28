@@ -13,6 +13,11 @@ WE, SHALL NOT BE LIABLE FOR ANY DAMAGED OR LEGAL CONSENTS BY YOUR USAGE OF THIS 
 > apt install nginx
 3. git package
 > apt install git
+
+## INTRODUCTION
+
+The following demonstration illustrates how an attacker is able to create a public wireless network, and spoof your data.
+At the same time, the demonstration also showcase how the attacker process your information and impersonate themselves as someone of authority and get more of your sensitive data such as credit card information.
 ## INSTALLATION
 
 #### In this section, we will be explaining how to put the files into the webserver and ensure it loads.
