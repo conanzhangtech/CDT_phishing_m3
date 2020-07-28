@@ -1,0 +1,12 @@
+$(function() {
+    $('#slides').slidesjs({
+        width: 498,
+        height: 504,
+        play: {
+            active: true,
+            auto: true,
+            interval: 4000,
+            swap: true
+        }
+    });
+});

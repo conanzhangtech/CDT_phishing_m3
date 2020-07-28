@@ -1,0 +1,6 @@
+$(function() {
+    $("a#toggle").click(function() {
+        $("#navigation").slideToggle();
+        return false;
+    });
+});

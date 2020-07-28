@@ -1,0 +1,213 @@
+	jQuery.validator.addMethod("validateNric", function(value, element) {
+
+	    return this.optional(element) || (IsValidNRIC(value.toUpperCase()) == true);
+	}, "Invalid NRIC");
+
+	/* MESSAGE CONSTANTS ======================================================= */
+	var MESSAGE_CONSTANTS = MESSAGE_CONSTANTS || {};
+
+	MESSAGE_CONSTANTS.INTERNALERROR = "Internal error.";
+	MESSAGE_CONSTANTS.PENDING = "Please wait while we process your registration.";
+	MESSAGE_CONSTANTS.SUCCESS_LOCAL_SUBMIT = "Thank you for registering with StarHub. Your Wireless@SG username is %USERNAME%@starhub. Your password will be sent via SMS to your registered mobile number shortly. Customer service hotline: 6873 2828.";
+	MESSAGE_CONSTANTS.SUCCESS_FOREIGN_SUBMIT = "Thank you for registering with StarHub. Your Wireless@SG username is %USERNAME%. Your password will be sent via SMS to your registered mobile number shortly. Customer service hotline: +65 6873 2828.";
+
+	var API_URL = global.fullpath + "/Confirm/apiConfirm";
+	/* ========================================================================= */
+
+	var form = form || {};
+
+	form.type = "foreign";
+
+	form.setFormType = function(type){
+		form.type = "foreign";
+	}
+
+	form.getFormDOM = function(){
+		var formId = "#form-foreign";
+		return $(formId);
+	}
+
+	form.setPendingMessage = function(text){
+		form.getFormDOM().find(".pendingMessage").text(text);
+	}
+
+	form.setMessage = function(text){
+		form.getFormDOM().find(".message").text(text);
+		form.getFormDOM().find(".message").show();
+	}
+
+	form.clearMessage = function(){
+		//form.getFormDOM().find(".pendingMessage").text("");
+		form.getFormDOM().find(".message").text("");
+		form.getFormDOM().find(".message").hide();
+	}
+
+	form.localSubmit = function() {
+		form.setFormType("local");
+		$.ajax({
+			url: API_URL,
+			type: 'POST',
+			dataType: "json",
+			data: form.getFormDOM().serialize(),
+			complete: function(data) {
+				form.displayCompleting(data);
+			},
+			beforeSend: function(data) {
+				form.displayLoading();
+			}
+		});
+	}
+
+	form.foreignSubmit = function() {
+		form.setFormType("foreign");
+		$.ajax({
+			url: API_URL,
+			type: 'POST',
+			dataType: "json",
+			data: form.getFormDOM().serialize(),
+			complete: function(data) {
+				form.displayCompleting(data);
+			},
+			beforeSend: function(data) {
+				//form.displayLoading();
+			}
+		});
+	}
+
+	form.displayLoading = function() {
+		form.clearMessage();
+		form.setPendingMessage(MESSAGE_CONSTANTS.PENDING);
+	}
+
+	form.displayCompleting = function(data){
+		form.clearMessage();
+
+		var resultStatus = "";
+		var msg = MESSAGE_CONSTANTS.INTERNALERROR;
+		var username = "";
+
+		if (typeof data.responseJSON !== "undefined") {
+			resultStatus = data.responseJSON.result;
+			msg = data.responseJSON["error-msg"];
+			username = data.responseJSON["mobile"] + "@starhub";
+		}
+
+		if (resultStatus == "ok") {
+			form.clearMessage();
+			$("#username").val(username);
+			$("#confirm_div").hide();
+			$("#login_div").show();
+			$("#ddl_code").attr("readonly", "readonly");
+			$("#code").attr("readonly", "readonly");
+			$("#mobile").attr("readonly", "readonly");
+			$("#mobileCfmCode").attr("readonly", "readonly");
+			$("#mobileCfm").attr("readonly", "readonly");
+			$("#captcha_code").attr("readonly", "readonly");
+			$("#captcha_link").addClass("disabled");
+		} else {
+			form.setMessage(msg);
+			$("#ddl_code").removeAttr("readonly");
+			$("#code").removeAttr("readonly");
+			$("#mobile").removeAttr("readonly");
+			$("#mobileCfmCode").removeAttr("readonly");
+			$("#mobileCfm").removeAttr("readonly");
+			$("#captcha_code").removeAttr("readonly");
+			$("#captcha_link").removeClass("disabled");
+			$("#confirm_div").show();
+			$("#login_div").hide();
+		}
+	}
+
+	form.getMessageSuccess = function(){
+		var username;
+		if (form.type === "local") {
+			username = form.getFormDOM().find("#username").val();
+			return MESSAGE_CONSTANTS.SUCCESS_LOCAL_SUBMIT.replace("%USERNAME%",username);
+		} else {
+			var countryCode = form.getFormDOM().find("#code").val().replace("+","");
+			var mobile = form.getFormDOM().find("#mobile").val();
+			username = countryCode + mobile;
+			return MESSAGE_CONSTANTS.SUCCESS_FOREIGN_SUBMIT.replace("%USERNAME%",username);
+		}
+	}
+
+	function popup()
+	{
+	  var height = 630;
+	  var width = 630;
+	  var url;
+
+	  // Centralize window
+	  if (window.screen) {
+		var ah = screen.availHeight - 30;
+		var aw = screen.availWidth - 10;
+		var xc = (aw - height) / 2;
+		var yc = (ah - width) / 2;
+	  }
+
+	  url= "http://www.starhub.com/about-us/legal-notices-and-terms/terms-and-conditions/consumer/wireless-sg.html";
+
+	  var specs = "resizable=yes,scrollbars=yes,height=" + height + ", width=" + width + ",left=" + xc + ", screenX=" + xc + ",top=" + yc + ", screenY=" + yc;
+
+	  return window.open(url, '_blank', specs);
+	}
+
+	$(document).ready(function() {
+
+		$("#foreign-submit").click(function() {
+			if($("#form-foreign").valid() == true) {
+				form.foreignSubmit();
+			}
+		});
+
+		$("select#ddl_code").change(function() {
+			$("#code").val($("select#ddl_code option:selected").val());
+			$("#mobileCfmCode").val($("select#ddl_code option:selected").val());
+		});
+
+		$("#chkAgree").change(function(){
+			if($(this).is(":checked")){
+				$("#foreign-submit").removeAttr("disabled");
+				$("#foreign-submit").removeClass("disabled");
+			}else{
+				$("#foreign-submit").attr("disabled", "disabled");
+				$("#foreign-submit").addClass("disabled");
+			}
+		});
+
+		if($("#chkAgree").is(":checked")){
+			$("#foreign-submit").removeAttr("disabled");
+			$("#foreign-submit").removeClass("disabled");
+		}else{
+			$("#foreign-submit").attr("disabled", "disabled");
+			$("#foreign-submit").addClass("disabled");
+		}
+
+		$('form#form-foreign').validate({
+			rules: {
+				mobile: {
+					//pattern: /^[0-9]*$/,
+					required: true
+				},
+				mobileCfm: {
+					equalTo: "#mobile"
+				}
+			},
+			messages: {
+				mobile: {
+					//pattern: "Mobile number must be digits."
+				},
+				mobileCfm: {
+					equalTo: "Mobile number mismatch"
+				}
+			},
+			errorPlacement: function(error, element) {
+				if (element.attr("name") == "agree") {
+					error.insertAfter(element.next());
+					error.addClass("float");
+				} else {
+					error.insertAfter(element);
+				}
+			}
+		});
+	});

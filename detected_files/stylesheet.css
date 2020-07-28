@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('fLibreFranklin-Bold.woff2') format('woff2'),
+        url('https://www.police.gov.sg/LibreFranklin-Bold.woff') format('woff'),
+        url('https://www.police.gov.sg/LibreFranklin-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('https://www.police.gov.sg/LibreFranklin-SemiBold.woff2') format('woff2'),
+        url('https://www.police.gov.sg/LibreFranklin-SemiBold.woff') format('woff'),
+        url('https://www.police.gov.sg/LibreFranklin-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('https://www.police.gov.sg/LibreFranklin-Regular.woff2') format('woff2'),
+        url('https://www.police.gov.sg/LibreFranklin-Regular.woff') format('woff'),
+        url('https://www.police.gov.sg/LibreFranklin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
