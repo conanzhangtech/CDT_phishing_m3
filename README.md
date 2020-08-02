@@ -11,7 +11,7 @@ At the same time, the demonstration also showcase how the attacker processes you
 
 ## VIDEO DEMO
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u4Pg2_FqSuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![PHISHING DEMONSTRATION](https://img.youtube.com/vi/u4Pg2_FqSuc/0.jpg)](https://youtu.be/u4Pg2_FqSuc "Phishing Demonstration")
 
 ## PREREQUISITE
 
