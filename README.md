@@ -116,4 +116,4 @@ From the above data, we can safely deduce the following information:
 #### TELEGRAM: https://t.me/conan97zhang
 #### INSTAGRAM: https://instagram.com/conan97zhang
 
-@ Curriculum Development Team, Cyber Youth SIngapore
+@ Curriculum Development Team, Cyber Youth SIngapore (CYS)
